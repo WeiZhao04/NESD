@@ -6,7 +6,7 @@ The toolbox to perform native eigenspace denoising for rs-fMRI data.
 1) The SPM12 is required for basic functions and necessary preprocessing steps.
 source:https://www.fil.ion.ucl.ac.uk/spm/software/spm12/
 2) Both SPM12 and our codes should be added into PATH on MATALB before running.
-3) Basic file organization are needed under the pipeline in the demo.
+3) Basic file organization is needed under the pipeline described in the demo.
 
 # Acknowledgement
 Author: Wei Zhao (wei.zhao.dlut@foxmail.com)
