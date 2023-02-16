@@ -11,7 +11,7 @@ The toolbox to perform native eigenspace denoising for rs-fMRI data.
 # Acknowledgement
 Author: Wei Zhao (wei.zhao.dlut@foxmail.com)
 We appreciated that some useful basic functions are modified or refered to previous convinient toolbox DPARSF and REST.  
-source: http://rfmri.org/DPABI https://www.nitrc.org/projects/rest/  
+source: http://rfmri.org/DPABI & https://www.nitrc.org/projects/rest/  
 
 Any questions, pls do not hesitate to contact wei.zhao.dlut@foxmail.com or hj_li@dlut.edu.cn
 
