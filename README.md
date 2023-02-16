@@ -1,5 +1,6 @@
 # NESD (rs-fMRI denoising)
-The toolbox to perform native eigenspace denoising for rs-fMRI data. 
+The toolbox to perform native eigenspace denoising for rs-fMRI data.  
+A singleton version of fMRI quality assessment toolbox in .
 ![image](https://user-images.githubusercontent.com/59679583/219349261-668ee863-7b7d-400d-a600-638e9b04afec.png)
 
 # Installtion
