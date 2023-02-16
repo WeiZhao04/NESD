@@ -1,0 +1,2 @@
+https://github.com/ThomasYeoLab/CBIG/tree/master/stable_projects/brain_parcellation
+https://osf.io/ue5gx/
