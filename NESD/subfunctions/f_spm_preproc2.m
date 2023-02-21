@@ -4,7 +4,7 @@ function f_spm_preproc2(fun_file,pre_dir)
 % pre_dir:  (str) - the path to save output files for preproc
 
 %%
-[codepath, ~, ~] = fileparts(which('m_demo_run.m'));
+[codepath, ~, ~] = fileparts(which('m_demo_NESD.m'));
 [SPMPath, ~, ~] = fileparts(which('spm.m'));
 [fMRI_dir,fMRI_name,ext,~] = spm_fileparts(fun_file);
 %% 0) mean reference
