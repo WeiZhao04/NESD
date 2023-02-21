@@ -11,7 +11,7 @@ close all;
 % [codepath, ~, ~] = fileparts(which('m_demo_NESD.m'));
 % e.g addpath(genpath(codepath))
 %% 
-wd = ['H:\SNR_UCLA_all\DATA']; % the working directionary
+wd = ['DATA']; % the working directionary
 cd(wd)
 sub_list = dir([wd filesep '*_*']); % the separator used to dected subfolders
 %%
