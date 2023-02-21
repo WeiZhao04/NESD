@@ -2,7 +2,7 @@ clc;clear;
 close all;
 %% readme before run
 % (1) pls organize the data into one working folder first, and each subfolder
-% better named as a particluar ordered patterns. Each subfolder only nedd
+% better named as a particluar ordered patterns. Each subfolder only need
 % to contain a signal native space file, named as fMRI.nii
 % (2) Be sure that required code package, spm12 are added into PATH.
 % e.g addpath(genpath('D:\code_packages\spm12'))
