@@ -8,7 +8,7 @@ close all;
 % e.g addpath(genpath('D:\code_packages\spm12'))
 % (3) Be sure that all NESD codes are added into PATH and do not rename or
 % delete the demo script 'm_demo_NESD.m'.
-% [codepath, ~, ~] = fileparts(which('m_demo_run.m'));
+% [codepath, ~, ~] = fileparts(which('m_demo_NESD.m'));
 % e.g addpath(genpath(codepath))
 %% 
 wd = ['H:\SNR_UCLA_all\DATA']; % the working directionary
@@ -137,7 +137,7 @@ for k_sub = 1:length(sub_list)
     f_grayplot_rp_gs(fname,seg_roi,rel_rms);
     f_plot_time_freq(fname,seg_roi,TR,0.5*window_length,0.1*step_length);
     %% (optional) Normalise with EPI, better performed with other standard protocals/pipelines
-%     [codepath, ~, ~] = fileparts(which('m_demo_run.m'));
+%     [codepath, ~, ~] = fileparts(which('m_demo_NESD.m'));
 %     [SPMFilePath, ~, ~] = fileparts(which('spm.m'));
 %     SPMJOB = load([codepath,'templates',filesep,'Jobmats',filesep,'Normalize.mat']);
 %     mean_fun = [pre_dir filesep 'mean_' fun_name ext];
@@ -164,7 +164,7 @@ for k_sub = 1:length(sub_list)
 %     SPMJOB.matlabbatch{1,1}.spm.spatial.smooth.fwhm = FWHM;
 %     spm_jobman('run',SPMJOB.matlabbatch);
     %% (optional) static and dynamic FC, only availalbe in MNI space (2mm or 3mm)
-%     altas_name = 'H:\SNR_UCLA_all\Schaefer2018_100Parcels_7Networks_order_FSLMNI152_3mm.nii';
+%     altas_name = [codepath filesep 'templates' filesep '\Schaefer2018_100Parcels_7Networks_order_FSLMNI152_3mm.nii'];
 %     mni_seg_roi = f_spm_load_nii([fea_dir filesep 'wseg_roi.nii']); 
 %     fname = [ori_dir filesep 'swfMRI.nii'];
 %     load([fea_dir filesep 'RP.mat'],'rel_rms')
