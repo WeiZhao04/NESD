@@ -2,12 +2,12 @@ clc;clear;
 close all;
 %% readme before run
 % (1) pls organize the data into one working folder first, and each subfolder
-% better named as a particluar ordered patterns. Each subfolder only need
+% better named as a particluar ordered patterns. Each subfolder only nedd
 % to contain a signal native space file, named as fMRI.nii
 % (2) Be sure that required code package, spm12 are added into PATH.
 % e.g addpath(genpath('D:\code_packages\spm12'))
 % (3) Be sure that all NESD codes are added into PATH and do not rename or
-% delete the demo script 'm_demo_NESD.m'.
+% delete 'm_demo_run.m'
 % [codepath, ~, ~] = fileparts(which('m_demo_NESD.m'));
 % e.g addpath(genpath(codepath))
 %% 
@@ -139,7 +139,7 @@ for k_sub = 1:length(sub_list)
     %% (optional) Normalise with EPI, better performed with other standard protocals/pipelines
 %     [codepath, ~, ~] = fileparts(which('m_demo_NESD.m'));
 %     [SPMFilePath, ~, ~] = fileparts(which('spm.m'));
-%     SPMJOB = load([codepath,'templates',filesep,'Jobmats',filesep,'Normalize.mat']);
+%     SPMJOB = load([codepath filesep 'templates' filesep 'Jobmats' filesep 'Normalize.mat']);
 %     mean_fun = [pre_dir filesep 'mean_' fun_name ext];
 %     FileList = [{ori_fMRI};{mean_fun};{seg_roi_name};{mask_name};{nesd_name}];
 %     SPMJOB.matlabbatch{1,1}.spm.spatial.normalise.estwrite.subj(1,1).source={mean_fun};
@@ -149,7 +149,7 @@ for k_sub = 1:length(sub_list)
 %     SPMJOB.matlabbatch{1,1}.spm.spatial.normalise.estwrite.roptions.vox = [3 3 3];
 %     spm_jobman('run',SPMJOB.matlabbatch);
     %% (optional) Smooth
-%     SPMJOB = load([codepath,'templates',filesep,'Jobmats',filesep,'Smooth.mat']);
+%     SPMJOB = load([codepath filesep 'templates' filesep 'Jobmats' filesep 'Smooth.mat']);
 %     w_raw = fullfile(ori_dir,strcat('w',fun_name,ext));
 %     SPMJOB.matlabbatch{1,1}.spm.spatial.smooth.data = [{w_raw}];
 %     SPMJOB.matlabbatch{1,1}.spm.spatial.smooth.fwhm = [6 6 6];
@@ -164,7 +164,7 @@ for k_sub = 1:length(sub_list)
 %     SPMJOB.matlabbatch{1,1}.spm.spatial.smooth.fwhm = FWHM;
 %     spm_jobman('run',SPMJOB.matlabbatch);
     %% (optional) static and dynamic FC, only availalbe in MNI space (2mm or 3mm)
-%     altas_name = [codepath filesep 'templates' filesep '\Schaefer2018_100Parcels_7Networks_order_FSLMNI152_3mm.nii'];
+%     altas_name = [codepath filesep 'templates' filesep 'altas' filesep Schaefer2018_100Parcels_7Networks_order_FSLMNI152_3mm.nii'];
 %     mni_seg_roi = f_spm_load_nii([fea_dir filesep 'wseg_roi.nii']); 
 %     fname = [ori_dir filesep 'swfMRI.nii'];
 %     load([fea_dir filesep 'RP.mat'],'rel_rms')
