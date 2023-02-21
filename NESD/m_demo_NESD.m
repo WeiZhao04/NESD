@@ -6,8 +6,8 @@ close all;
 % to contain a signal native space file, named as fMRI.nii
 % (2) Be sure that required code package, spm12 are added into PATH.
 % e.g addpath(genpath('D:\code_packages\spm12'))
-% (3) Be sure that NESD codes are added into PATH  and do not rename or
-% delete 'm_demo_run.m'
+% (3) Be sure that all NESD codes are added into PATH and do not rename or
+% delete the demo script 'm_demo_NESD.m'.
 % [codepath, ~, ~] = fileparts(which('m_demo_run.m'));
 % e.g addpath(genpath(codepath))
 %% 
