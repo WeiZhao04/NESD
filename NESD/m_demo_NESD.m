@@ -7,7 +7,7 @@ close all;
 % (2) Be sure that required code package, spm12 are added into PATH.
 % e.g addpath(genpath('D:\code_packages\spm12'))
 % (3) Be sure that all NESD codes are added into PATH and do not rename or
-% delete 'm_demo_run.m'
+% delete 'm_demo_NESD.m'
 % [codepath, ~, ~] = fileparts(which('m_demo_NESD.m'));
 % e.g addpath(genpath(codepath))
 %% 
