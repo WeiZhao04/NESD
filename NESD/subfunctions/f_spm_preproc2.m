@@ -14,13 +14,13 @@ mean_funfile = fullfile(fMRI_dir,strcat('mean_',fMRI_name,ext));
 f_spm_save_nii(mean_fMRI,mean_funfile,fun_file);
 copyfile(mean_funfile,pre_dir)
 %% 1) Realignment
-SPMJOB = load([codepath,'templates',filesep,'Jobmats',filesep,'Realign.mat']);
+SPMJOB = load([codepath filesep 'templates' filesep 'Jobmats' filesep 'Realign.mat']);
 SPMJOB.matlabbatch{1,1}.spm.spatial.realign.estwrite.data{1,1}={fun_file};
 spm_jobman('run',SPMJOB.matlabbatch);
 delete(fullfile(fMRI_dir,[fMRI_name '.mat']))
 %% 2) Dartel Segment
 
-SPMJOB = load([codepath,'templates',filesep,'Jobmats',filesep,'NewSegment.mat']);
+SPMJOB = load([codepath filesep 'templates' filesep 'Jobmats' filesep 'NewSegment.mat']);
 SPMJOB.matlabbatch{1,1}.spm.tools.preproc8.channel.vols={[pre_dir filesep 'mean_' fMRI_name ext]};
 for tclass =1:6 
 SPMJOB.matlabbatch{1,1}.spm.tools.preproc8.tissue(1,tclass).tpm{1,1}=[SPMPath,filesep,'tpm',filesep,'TPM.nii',',',num2str(tclass)]; %YAN Chao-Gan, 161006.
